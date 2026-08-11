@@ -10,7 +10,7 @@ app.use(cors({ origin: process.env.FRONTEND_URL || 'http://localhost:5173' }));
 app.use(express.json());
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGODB_URI)
     .then(async() => {
         console.log('[SYSTEM] MongoDB connected successfully');
         await seedDatabase();
